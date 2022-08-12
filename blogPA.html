@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Blog Posts">
+	<meta name="author" content="Araba Ocran">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Send+Flowers&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nova+Oval&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+    <title>BLOG</title>     
+    <link rel="stylesheet" href="style_PA.css">
+	
+	<style>
+		#sidebar{
+		height: auto;
+		}
+		#main{
+		height: 850px;
+		}
+		input[type=text], input[type=password] {
+		width: 85%;
+		padding: 15px;
+		margin: 5px 0 22px 0;
+		display: inline-block;
+		border: none;
+		background: #f1f1f1;
+		}
+
+		input[type=text]:focus, input[type=password]:focus {
+		background-color: #bad689;
+		outline: none;
+		}
+
+		/* BUTTON STYLE FOR PG */
+		button {
+		background-color: #039e7d;
+		color: white;
+		padding: 14px 20px;
+		margin: 8px 0;
+		border: none;
+		cursor: pointer;
+		width: 100%;
+		opacity: 0.9;
+		}
+
+		button:hover {
+		opacity:1;
+		}
+
+		.bttn-center{
+			text-align: center;
+		}
+
+		/* FLOAT signup buttons*/
+		.signupbtn {
+		float: left;
+		width: 50%;
+		}
+
+		/* PADDING */
+		.containerr {
+		padding: 16px;
+		}
+
+		/* BACKGROUND */
+		.modal {
+		display: none; /* Hidden by default */
+		position: fixed; /* Stay in place */
+		z-index: 1; /* Sit on top */
+		left: 0;
+		top: 0;
+		width: 100%; /* Full width */
+		height: 100%; /* Full height */
+		overflow: auto; /* Enable scroll if needed */
+		background-color: #475d56;
+		padding-top: 50px;
+		}
+
+		/* MODAL CONTENT */
+		.modal-content {
+		background-color: #fefefe;
+		margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+		border: 1px solid #888;
+		width: 80%; /* Could be more or less, depending on screen size */
+		}
+
+		/* HR STYLE */
+		hr {
+		border: 1px solid #f1f1f1;
+		margin-bottom: 25px;
+		}
+
+		/* The Close Button (x) */
+		.close {
+		position: absolute;
+		right: 35px;
+		top: 15px;
+		font-size: 40px;
+		font-weight: bold;
+		color: #f1f1f1;
+		}
+
+		.close:hover,
+		.close:focus {
+		color: #f44336;
+		cursor: pointer;
+		}
+
+		/* MORE FLOAT */
+		.clearfix::after {
+		content: "";
+		clear: both;
+		display: table;
+		}
+
+
+		@media screen and (max-width: 300px) {
+		.signupbtn {
+		width: 100%;
+		}
+		}
+	</style>
+</head>
+
+
+
+<body>
+	<div id="top"><h1 style="font-family: 'Send Flowers', cursive;"> plants and arts</h1></div>
+	
+	 <div id="container">
+		<div class="container flex">
+        <div class="topnav" id="myTopnav">
+                <a href="homePA.html">Home</a>
+                <a class="active" href="blogPA.html">blog</a>
+                <a href="shopPA.html">shop</a>
+                <a href="resourcesPA.html">Resources</a>
+				<a href="contactPA.html">Contact</a>
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+					<i class="fa fa-bars"></i></a>
+			</div>
+		</div>
+<!-- MAIN PAGE -->
+		<div id="main">
+			<div><h1>OUR BLOG</h1>
+                <p> As artists ourselves, we want to inspire your to unleash your crreativty and thrive in your space. In such fashion, weve curated weekly blog posts highlighting new creative tools, wellness guides, at home art therapy activites and more. No cost to you!  </p>
+            </div>
+            <div id="sidebar" style="align-items: center;">
+				<img src="https://i.pinimg.com/236x/17/8c/24/178c242fd1dc31860c79637c4793a916.jpg" alt="study desk asethic"  style="border-radius: 10px; padding:inherit">
+            </div><br>
+			
+			
+			<div class="bttn-center">
+			 <h2 style="text-align: center">*coming soon- blogs are updated and highlighted weekly* </h2>
+				<p style="text-align: center"> Sign up to get updated via our weekly email newsletter below!</p>
+					
+				<button  onclick="document.getElementById('id01').style.display='block'" style="width:auto; position: absolute;">Sign Up</button>
+					<div id="id01" class="modal">
+						<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;
+						</span>
+							<form class="modal-content" action="welcome_get.php" method="get">
+								<div class="containerr">
+								<h1>Sign Up</h1>
+									<p>Please fill in this form to subscribe to our weekly newsletter!</p>
+								<hr>
+								<label for="name" id="name"><b>Name</b></label>
+								<input type="text" placeholder="Name" name="name" required><br>
+								<label for="email" id="email"><b>Email</b></label>
+								<input type="text" placeholder="Enter Email" name="email" required><br>
+								<input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+
+								<p>By checking the box you agree to our <a href="#" style="color:dodgerblue">Policy, Terms & Privacy</a>.</p>
+								<div class="clearfix">
+								<button type="submit" class="signupbtn">Subscribe</button>
+									
+								</div>
+								</div>
+							</form>
+				</div>
+			</div>
+			
+			
+			
+			
+			
+			
+		 </div>	
+		 <br>
+<!-- FOOTER -->
+		<div id="footer"><h1> Thank you for stopping by!</h1>
+			<div id="social">
+			<a href="#" class="fa fa-twitter"></a>
+			<a href="#" class="fa fa-google"></a>
+			<a href="#" class="fa fa-instagram"></a>
+			<a href="#" class="fa fa-pinterest"></a>
+			</div>
+			<p style="text-align: center;"> &copy;2021 PLANTS & ART</p>
+
+		 </div>
+
+		</div>
+	
+	<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+	</body>
+</html>
+		 
+
